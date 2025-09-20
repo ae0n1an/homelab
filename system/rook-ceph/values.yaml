@@ -8,9 +8,9 @@ rook-ceph-cluster:
   cephClusterSpec:
     mon:
       allowMultiplePerNode: true
-      count: 3
+      count: 1
     mgr:
-      count: 2
+      count: 1
     dashboard:
       ssl: false
     logCollector:
@@ -61,11 +61,11 @@ rook-ceph-cluster:
       spec:
         metadataPool:
           replicated:
-            size: 2
+            size: 1
         dataPools:
           - name: data0
             replicated:
-              size: 2
+              size: 1
         metadataServer:
           activeCount: 1
           activeStandby: true
